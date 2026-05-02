@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHP Decision Tool - Patrick Fosso</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Outil de Décision AHP</h1>
+            <p>Méthode d'Analyse Hiérarchique multicritère [cite: 1]</p>
+        </header>
+
+        <section id="step1">
+            <h2>Étape 1 : Critères et Alternatives</h2>
+            <div class="input-group">
+                <label>Critères (séparés par des virgules) :</label>
+                <input type="text" id="criteria" placeholder="Ex: Prix, Qualité, Design">
+            </div>
+            <div class="input-group">
+                <label>Alternatives (séparées par des virgules) :</label>
+                <input type="text" id="alternatives" placeholder="Ex: Produit A, Produit B">
+            </div>
+            <button onclick="setupComparison()">Générer la Matrice</button>
+        </section>
+
+        <section id="step2" class="hidden">
+            <h2>Étape 2 : Comparaison par Paires [cite: 5]</h2>
+            <div id="matrix-container"></div>
+            <button onclick="processAHP()">Vérifier la Cohérence et Calculer </button>
+        </section>
+
+        <section id="result" class="hidden"></section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
